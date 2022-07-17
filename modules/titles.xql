@@ -38,10 +38,4 @@ declare variable $data as element(m:titles) :=
         <m:title>{$article//tei:titleStmt/tei:title ! fn:string(.)}</m:title>
 }</m:titles>;
 
-<html:section>
-  <html:ul>{ 
-    for $title in $data/m:title
-    return
-        <html:li>{$title ! string(.)}</html:li>
-}</html:ul>
-</html:section>
+$data
